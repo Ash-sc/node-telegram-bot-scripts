@@ -5,8 +5,16 @@
 ---
 
 ## 如何使用
+
+### 1. 开发模式
 1. 修改config/config.json
 2. `npm install && npm start`
+
+### 2. docker
+1. `npm run build`
+2. `docker run -itd -v 宿主机配置目录:/home/service/src/config --name telegram-bot ash/telegram-bot`
+3. 修改config/config.json
+
 ## config.json格式
 
 ``` js
@@ -41,4 +49,7 @@
 
 示例：   
 
-![示例图片](https://raw.githubusercontent.com/Ash-sc/node-telegram-bot-scripts/main/weather-bot.png)
+<img src="https://raw.githubusercontent.com/Ash-sc/node-telegram-bot-scripts/main/weather-bot.png" alt="示例图片" width="400"/>
+
+   
+END.

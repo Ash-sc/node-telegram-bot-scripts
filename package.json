@@ -12,7 +12,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node ./src/app.js"
+    "start": "node ./src/app.js",
+    "build": "docker build -t ash/telegram-bot ."
   },
   "repository": {
     "type": "git",
