@@ -7,7 +7,8 @@ const moment = require('moment')
 const weatherSchedule = require('./schedule/weather')
 
 const scheduleMap = {
-  weather: weatherSchedule.weatherSchedule
+  weather: weatherSchedule.weatherSchedule,
+  weatherTomorrow: (config) => weatherSchedule.weatherSchedule(config, 1)
 }
 
 const ymdStr = 'YYYY-MM-DD HH:mm:ss'

@@ -14,7 +14,7 @@ async function sendMessage (msg, config) {
   .catch(console.err)
 }
 
-async function weatherSchedule(config) {
+async function weatherSchedule(config, offset) {
   const { gdKey, city } = config || {}
   const weatherData = await fetch(
     `https://restapi.amap.com/v3/weather/weatherInfo?key=${gdKey}&city=${city}&extensions=all`
@@ -24,12 +24,12 @@ async function weatherSchedule(config) {
 
   let msg = ''
   if (weatherData.info !== 'OK') {
-    msg = '😞 今日天气查询报错啦'
+    msg = '😞 天气查询报错啦'
   } else {
-    const todayDetail = weatherData?.forecasts?.[0]?.casts?.[0] || {}
+    const todayDetail = weatherData?.forecasts?.[0]?.casts?.[offset || 0] || {}
     const city = weatherData?.forecasts?.[0].city || ''
     if (!Object.keys(todayDetail).length) {
-      msg = '😞 今日天气查询失败'
+      msg = '😞 天气查询失败'
     } else {
       msg = `😙😙😙, ${todayDetail.date}${city}:
 
