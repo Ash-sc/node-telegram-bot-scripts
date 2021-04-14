@@ -7,7 +7,7 @@
 ## 如何使用
 
 ### 1. 开发模式
-1. 修改config/config.json
+1. 修改src/config/config.json
 2. `npm install && npm start`
 
 ### 2. docker
