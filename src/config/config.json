@@ -1,0 +1,13 @@
+{
+  "weather": {
+    "cron": "0 7 * * *",
+    "gdKey": "xxx",
+    "city": "361102",
+    "chatId": "-xxx",
+    "botToken": "xxx",
+    "httpProxy": {
+      "host": "127.0.0.1",
+      "port": "18080"
+    }
+  }
+}

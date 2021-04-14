@@ -1,0 +1,28 @@
+{
+  "name": "node-telegram-bot-scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cron-parser": "^3.3.0",
+    "moment": "^2.29.1",
+    "node-fetch": "^2.6.1",
+    "node-schedule": "^2.0.0",
+    "telegram-bot-api": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ash-sc/node-telegram-bot-scripts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ash-sc/node-telegram-bot-scripts/issues"
+  },
+  "homepage": "https://github.com/Ash-sc/node-telegram-bot-scripts#readme"
+}
