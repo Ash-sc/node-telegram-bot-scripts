@@ -6,9 +6,11 @@ const moment = require('moment')
 moment.locale('zh-CN')
 
 const weatherSchedule = require('./schedule/weather')
+const txWorldNews = require('./schedule/txWorldNews')
 
 const scheduleMap = {
   weather: weatherSchedule.weatherSchedule,
+  txWorldNews: txWorldNews.getNews,
 }
 
 const ymdStr = 'YYYY-MM-DD HH:mm:ss'

@@ -33,20 +33,50 @@
       "port": "18080"
     }
   },
+  {
+    "script": "txWorldNews",
+    "note": "国际新闻",
+    "cron": "0 7 * * *",
+    "txKey": "xxx", // 天行api key
+    "num": 15, // 新闻数量 默认10
+    "chatId": "-xxx",
+    "botToken": "xxx",
+    "httpProxy": {
+      "host": "xxx",
+      "port": "xxx"
+    }
+  }
   ...
 ]
 ```
-## 1. 天气预报机器人
+## 1. 天气
 
 可以定时汇报天气（今日 / 明日），使用高德地图api，汇报内容包括，当日天气、气温、风向以及风级、穿衣建议。
 
 需在config.json中指定：
 1. `"script": "weather"`
 2. 如果需要获取明天/后天天气，需设置`"dayOffset"`
+3. 高德开放平台 key`"gdKey"`
+3. 城市编码 `"city"` 可参照 https://lbs.amap.com/api/webservice/download
 
 示例：   
 
 <img src="https://raw.githubusercontent.com/Ash-sc/node-telegram-bot-scripts/main/weather-bot.png" alt="示例图片" width="400"/>
+
+
+## 2. 国际新闻
+
+新闻来自天行api https://www.tianapi.com/apiview/5
+
+需在config.json中指定：
+1. `"script": "txWorldNews"`
+2. 需设置天行数据key `"txKey"`
+3. 设置新闻数量 `"num"` 默认10个
+
+示例：
+
+<img src="https://raw.githubusercontent.com/Ash-sc/node-telegram-bot-scripts/main/txWorldNews-bot.png" alt="示例图片" width="400"/>
+
 
    
 END.

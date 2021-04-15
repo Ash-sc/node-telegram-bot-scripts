@@ -23,7 +23,7 @@ async function weatherSchedule(config) {
     .then(body => JSON.parse(body))
 
   let msg = ''
-  if (weatherData.info !== 'OK') {
+  if (weatherData?.info !== 'OK') {
     msg = '😞 天气查询报错啦'
   } else {
     const todayDetail = weatherData?.forecasts?.[0]?.casts?.[config.dayOffset || 0] || {}
